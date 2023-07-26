@@ -6,8 +6,8 @@ from .serializers import SnackSerializer
 
 
 
-class SnackListView(ListAPIView):  # Use ListAPIView here
-    queryset = Snack.objects.all()  # Remove ListCreateAPIView from this line
+class SnackListView(ListCreateAPIView):  
+    queryset = Snack.objects.all() 
     serializer_class = SnackSerializer
 
 class SnackDetailView(RetrieveUpdateDestroyAPIView):
